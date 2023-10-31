@@ -17,8 +17,8 @@ body header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
-  background-color: #354003;
+  padding: 2rem 7%;
+  background-color: #112e42;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,20 +36,19 @@ body .logo {
   opacity: 0;
   height: 400px;
   width: 300px;
-  position: absolute;
-  top: 105px;
-  right: -250px;
+  position: fixed;
+  top: -400px; /* Initially off the screen */
+  right: 0;
   background: #112e42;
   color: #fff;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  transition: 0.5s ease-in-out;
-  border: black 2px dashed;
-  border-radius: 10px;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
   font-size: 40px;
   font-weight: 600;
+  z-index: 2; /* Ensure it's on top of other content */
 }
 #sidebar a {
   color: white;
@@ -62,8 +61,8 @@ body .logo {
 
 #menu-icon {
   cursor: pointer;
-  scale: 2.4;
-  padding-left: 70px;
+  scale: 2.8;
+  position: fixed;
 }
 
 #menu-icon:hover {
@@ -71,7 +70,7 @@ body .logo {
 }
 
 #sidebar.open {
-  right: 0;
+  top: 100px;
   opacity: 1;
   transition: 0.5s ease-in-out;
 }
@@ -80,7 +79,7 @@ body .logo {
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 .home .home-content {
   width: 600px;
@@ -98,6 +97,7 @@ body .logo {
   justify-content: space-between;
   width: 345px;
   height: 50px;
+  color: white;
 }
 .home .btn-box a {
   position: relative;
@@ -109,8 +109,7 @@ body .logo {
   background: #00abf0;
   border: 2px solid #00abf0;
   border-radius: 8px;
-  font-size: 19px;
-  color: black;
+  font-size: 20px;
   text-decoration: none;
   letter-spacing: 1px;
   z-index: 1;
@@ -126,7 +125,7 @@ body .logo {
   color: #00abf0;
 }
 .home .btn-box a:nth-child(2):hover {
-  color: #10034b;
+  color: #112e42;
 }
 .home .btn-box a:nth-child(2)::before {
   background: #00abf0;
@@ -138,7 +137,7 @@ body .logo {
   left: 0;
   width: 0;
   height: 100%;
-  background: #10034b;
+  background: #112e42;
   z-index: -1;
   transition: 0.5s;
 }
@@ -146,5 +145,38 @@ body .logo {
   width: 100%;
 }
 .home .btn-box a:hover {
-  color: var(--main-color);
+  color: white;
+}
+.home .home-links {
+  position: absolute;
+  bottom: 4rem;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+}
+.home .home-links a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  background: transparent;
+  border: 0.2rem solid #112e42;
+  border-radius: 1px;
+  scale: 3;
+  text-decoration: none;
+  color: #93b7be;
+}
+
+.about-section {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  padding: 2rem 7%;
+  background-color: #112e42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lime;
 }/*# sourceMappingURL=style.css.map */
