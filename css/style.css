@@ -1,3 +1,22 @@
+@media screen and (min-width: 600px) {
+  .menu {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    visibility: visible;
+    position: absolute;
+  }
+  .nav-items {
+    visibility: hidden;
+  }
+  .home-links {
+    padding-left: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,8 +53,8 @@ body .logo {
 #sidebar {
   display: flex;
   opacity: 0;
-  height: 400px;
-  width: 300px;
+  height: 100vw;
+  width: 100vw;
   position: fixed;
   top: -400px; /* Initially off the screen */
   right: 0;
@@ -179,4 +198,22 @@ body .logo {
   justify-content: space-between;
   align-items: center;
   background-color: lime;
+}
+
+.nav-items {
+  width: 100vh;
+  font-size: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: end;
+  padding-left: 430px;
+}
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.nav-items a:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

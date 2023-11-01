@@ -1,0 +1,24 @@
+@media screen and (min-width: 600px){
+    .menu{
+        visibility: hidden;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .menu{
+        visibility: visible;
+        position: absolute;
+        
+
+    }
+    .nav-items{
+        visibility: hidden;
+    }
+    .home-links{
+        padding-left: 60px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
