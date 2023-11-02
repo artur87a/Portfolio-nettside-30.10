@@ -1,5 +1,6 @@
 @use "./colorsalt.scss" as *;
 @use "./media" as *;
+@use "./effect" as *;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,6 +32,24 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 600;
+  }
+}
+.nav-items {
+  width: 100vh;
+  font-size: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: end;
+  padding-left: 430px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  a:hover {
+    color: white;
   }
 }
 
@@ -65,10 +84,16 @@ body {
   }
 }
 
+.menu {
+
+}
+
 #menu-icon {
+  z-index: 10;
   cursor: pointer;
   scale: 2.8;
   position: fixed;
+right: 40px;
   // top:30px;
 }
 #menu-icon:hover {
@@ -89,6 +114,7 @@ body {
 
   .home-content {
     width: 600px;
+    z-index: 10;
   }
   .home-content h1 {
     font-size: 60px;
@@ -158,9 +184,15 @@ body {
     color: white;
   }
 
+.home-links-wrapper {
+  width: 100%;
+}
+
   .home-links {
     position: absolute;
     bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%) ;
     width: 270px;
     display: flex;
     justify-content: space-between;
@@ -177,39 +209,38 @@ body {
     border-radius: 1px;
     scale: 3;
     text-decoration: none;
-    color: $second-color
-    
+    color: $second-color;
   }
-  
 }
 .about-section {
-  display: flex;
-  height: 600px;
-  width: 100%;
+  height: calc(100vh - 103px);
   padding: 2rem 7%;
-  background-color: $main-color;
-  display: flex;
-  justify-content: space-between;
+  // background-color: $main-color;
+  justify-content: center;
   align-items: center;
-  background-color: lime;
-}
 
-.nav-items{
-  width: 100vh;
-  font-size: 30px;
-  display: flex;
-  gap:40px;
-  justify-content: flex-end;
-  align-items: end;
-  padding-left: 430px;
+  .about-header{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    // background-color: $main-color;
+    font-size: 40px;
+  }
+  .about-content{
+    font-size: 20px;
+  }
   
-  a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-  }
-  a:hover{
-    color: white;
-  }
-  }
+}
+.skills-section{
+  height: calc(100vh - 103px);
+  padding: 2rem 7%;
+  justify-content: center;
+  align-items: center;
 
+  .skills-header{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    font-size: 40px;
+  }
+}

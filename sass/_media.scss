@@ -5,10 +5,11 @@
     
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 599px){
     .menu{
         visibility: visible;
         position: absolute;
+        
         
 
     }
@@ -19,6 +20,10 @@
         padding-left: 60px;
         justify-content: center;
         align-items: center;
+        
+    }
+    .home{
+        scale:0.8;
         
     }
 }
