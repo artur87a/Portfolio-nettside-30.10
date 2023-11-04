@@ -1,6 +1,12 @@
 @use "./colorsalt.scss" as *;
 @use "./media" as *;
 @use "./effect" as *;
+@use "./animationtext" as *;
+@use "./about" as *;
+@use "./skills"  as *;
+@use "./projects" as *;
+@use "./contact" as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,6 +23,7 @@ body {
 
   header {
     position: fixed;
+    height: 100px;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,11 +90,6 @@ body {
     color: $fourth-color;
   }
 }
-
-.menu {
-
-}
-
 #menu-icon {
   z-index: 10;
   cursor: pointer;
@@ -186,16 +188,19 @@ right: 40px;
 
 .home-links-wrapper {
   width: 100%;
+  z-index: -1;
 }
 
   .home-links {
-    position: absolute;
+    position: fixed;
     bottom: 4rem;
     left: 50%;
     transform: translateX(-50%) ;
     width: 270px;
     display: flex;
     justify-content: space-between;
+    
+    
   }
   .home-links a {
     position: relative;
@@ -210,37 +215,6 @@ right: 40px;
     scale: 3;
     text-decoration: none;
     color: $second-color;
-  }
-}
-.about-section {
-  height: calc(100vh - 103px);
-  padding: 2rem 7%;
-  // background-color: $main-color;
-  justify-content: center;
-  align-items: center;
-
-  .about-header{
-    display: flex;
-    height: 200px;
-    justify-content: center;
-    // background-color: $main-color;
-    font-size: 40px;
-  }
-  .about-content{
-    font-size: 20px;
-  }
-  
-}
-.skills-section{
-  height: calc(100vh - 103px);
-  padding: 2rem 7%;
-  justify-content: center;
-  align-items: center;
-
-  .skills-header{
-    display: flex;
-    height: 200px;
-    justify-content: center;
-    font-size: 40px;
+    
   }
 }

@@ -1,0 +1,33 @@
+.about-section {
+  height: 100vh ;
+  padding: 2rem 7%;
+  padding-top: 100px;
+  
+  // background-color: aqua;
+  
+  
+ 
+.about-content{
+    font-size: 20px;
+  }
+
+.waviy {
+  position: relative;
+  
+}
+#waviy p {
+ display:inline-flex;
+  font-size: 40px;
+  font-weight: 900;
+  
+  color: #fff;
+//   text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+}
