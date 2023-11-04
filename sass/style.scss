@@ -1,9 +1,17 @@
 @use "./colorsalt.scss" as *;
+@use "./media" as *;
+@use "./effect" as *;
+@use "./animationtext" as *;
+@use "./about" as *;
+@use "./skills"  as *;
+@use "./projects" as *;
+@use "./contact" as *;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,76 +19,202 @@ body {
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
   overflow-x: hidden;
+  font-size: 72%;
 
   header {
-    height: 70px;
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
     background-color: $main-color;
-
-    .logo {
-      display: flex;
-      justify-content: space-between;
-      font-size: 30px;
-      font-weight: 600;
-      padding: 15px;
-      margin: 0px 20px;
-
-      
-      }
-    }
-
-  }
- #sidebar {
     display: flex;
-    opacity: 0;
-    height: 350px;
-    width: 250px; 
-    position: absolute;
-    top: 70px;
-    right: -250px; 
-    background: $main-color;
-    color: #fff;  
-    flex-direction: column; 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    transition:  0.5s ease-in-out;
-    border: black 2px dashed;
-    border-radius: 10px;
-   
+    z-index: 100;
+  }
+  .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+}
+.nav-items {
+  width: 100vh;
+  font-size: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: end;
+  padding-left: 430px;
 
-    a{
-        color: white;
-        text-decoration: none;
-     }
-     a:hover, a.active{
-      color: $fourth-color;
-     }
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  a:hover {
+    color: white;
+  }
 }
 
+#sidebar {
+  display: flex;
+  opacity: 0;
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
+  top: -400px; /* Initially off the screen */
+  right: 0;
+  background: $main-color;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  // border: 2px dashed black;
+  // border-radius: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  z-index: 2; /* Ensure it's on top of other content */
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover,
+  a.active {
+    color: $fourth-color;
+  }
+}
 #menu-icon {
-    cursor: pointer;
-    scale:1.4;
-    padding-right: 15px;
-    
-    }
-#menu-icon:hover{
-  color:$fourth-color;
+  z-index: 10;
+  cursor: pointer;
+  scale: 2.8;
+  position: fixed;
+right: 40px;
+  // top:30px;
 }
-
+#menu-icon:hover {
+  color: $fourth-color;
+}
 
 #sidebar.open {
-    right: 0;
-    opacity: 1;
-    // display: flex;
-    transition: 0.5s ease-in-out;
-    
-}
-section{
-  .home {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10%;
-}
-  
+  top: 100px;
 
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 5%;
+
+  .home-content {
+    width: 600px;
+    z-index: 10;
+  }
+  .home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .home-content h3 {
+    font-size: 32px;
+    color: #00abf0;
+  }
+
+  .home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    color: white;
+  }
+  .btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+  }
+
+  .btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+  }
+  .btn-box a:nth-child(2):hover {
+    color: $main-color;
+  }
+  .btn-box a:nth-child(2)::before {
+    background: #00abf0;
+  }
+
+  .btn-box a::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $main-color;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  .btn-box a:hover::before {
+    width: 100%;
+  }
+  .btn-box a:hover {
+    color: white;
+  }
+
+.home-links-wrapper {
+  width: 100%;
+  z-index: -1;
+}
+
+  .home-links {
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%) ;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+  }
+  .home-links a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
+    background: transparent;
+    border: 0.2rem solid $main-color;
+    border-radius: 1px;
+    scale: 3;
+    text-decoration: none;
+    color: $second-color;
+    
+  }
+}
