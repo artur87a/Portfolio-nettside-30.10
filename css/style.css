@@ -39,7 +39,7 @@
 .about-section {
   height: 100vh;
   padding: 2rem 7%;
-  padding-top: 500px;
+  padding-top: 300px;
 }
 .about-section .about-content {
   font-size: 20px;
@@ -66,7 +66,7 @@
   padding: 2rem 7%;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 300px;
 }
 .skills-section .skills-header {
   display: flex;
@@ -80,7 +80,7 @@
   padding: 2rem 7%;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 300px;
 }
 .projects-section .projects-header {
   display: flex;
@@ -94,7 +94,7 @@
   padding: 2rem 7%;
   justify-content: center;
   align-items: center;
-  padding-top: 400px;
+  padding-top: 100px;
 }
 .contact-section .contact-header {
   display: flex;
@@ -340,9 +340,9 @@ body .logo {
   width: 40px;
   height: 50px;
   background: transparent;
-  border: 0.2rem solid #112e42;
   border-radius: 1px;
   scale: 3;
   text-decoration: none;
   color: #93b7be;
+  opacity: 100%;
 }/*# sourceMappingURL=style.css.map */
