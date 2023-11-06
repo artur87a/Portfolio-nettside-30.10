@@ -11,4 +11,25 @@
     justify-content: center;
     font-size: 40px;
   }
+  .skills-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1 rem;
+    
+    // padding: 1 rem 80px;
+    // font-size: 68px
+  }
+  .skills-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    border: solid 1px black;
+    
+
+}
 }
