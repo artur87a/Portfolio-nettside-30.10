@@ -7,29 +7,44 @@
 
   .skills-header{
     display: flex;
-    height: 200px;
+    height: 50px;
     justify-content: center;
     font-size: 40px;
   }
   .skills-content{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    text-align: center;
-    grid-gap: 1 rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    grid-gap: 40px;
     
     // padding: 1 rem 80px;
     // font-size: 68px
   }
   .skills-box{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
     align-items: center;
     width: 200px;
-    height: 100px;
+    height: 300px;
     cursor: pointer;
-    border: solid 1px black;
+    border: solid 4px black;
     
-
+    
+    
+  i{
+  scale:3;
+  }
+  h6{
+    font-size: 30px;
+  }
+  p{
+    text-align: center;
+  }
 }
+
 }

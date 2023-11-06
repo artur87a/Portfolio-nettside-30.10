@@ -101,9 +101,11 @@ body {
   position: fixed;
 right: 40px;
   // top:30px;
+  transition: 0.5s ease-in-out;
 }
 #menu-icon:hover {
   color: $fourth-color;
+  transition: 0.5s ease-in-out;
 }
 
 #sidebar.open {
