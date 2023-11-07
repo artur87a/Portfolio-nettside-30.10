@@ -1,31 +1,42 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const lines = [];
+let lines = [];
+const maxLines = 100; // Set your desired maximum number of lines
 const colors = ['#FF5733', '#E22D60', '#9E004F', '#600080', '#283593'];
 
-const createLine = () => ({
-  x: Math.random() * canvas.width,
-  y: Math.random() * canvas.height,
-  dx: (Math.random() - 0.5) * 2,
-  dy: (Math.random() - 0.5) * 2,
-  length: Math.random() * 100 + 50,
-  color: colors[Math.floor(Math.random() * colors.length)],
-});
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  if (lines.length > maxLines) {
+    // Remove excess lines
+    lines.splice(maxLines);
+  }
+  while (lines.length < maxLines) {
+    lines.push(createLine());
+  }
+}
 
-const drawLine = (line) => {
+function createLine() {
+  return {
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    dx: (Math.random() - 0.5) * 2,
+    dy: (Math.random() - 0.5) * 2,
+    length: Math.random() * 100 + 50,
+    color: colors[Math.floor(Math.random() * colors.length)],
+  };
+}
+
+function drawLine(line) {
   ctx.strokeStyle = line.color;
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(line.x, line.y);
   ctx.lineTo(line.x + line.dx * line.length, line.y + line.dy * line.length);
   ctx.stroke();
-};
+}
 
-const updateLine = (line) => {
+function updateLine(line) {
   line.x += line.dx;
   line.y += line.dy;
 
@@ -37,25 +48,28 @@ const updateLine = (line) => {
   }
 
   drawLine(line);
-};
+}
 
-const init = () => {
+function init() {
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
   for (let i = 0; i < 100; i++) {
     lines.push(createLine());
   }
-};
+}
 
-const animate = () => {
+function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   lines.forEach((line) => {
     updateLine(line);
   });
-};
+}
 
 init();
 animate();
+
 
 
 /*EFFECT av tilt left */
@@ -80,3 +94,5 @@ checkViewport();
 
 window.addEventListener('scroll', checkViewport);
 /*ends here*/
+
+
