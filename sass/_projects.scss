@@ -11,4 +11,26 @@
     justify-content: center;
     font-size: 40px;
   }
+  .tilt-in-left-1 {
+    
+    
+    -webkit-animation: tilt-in-left-1 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: tilt-in-left-1 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            img{
+              height: 300px;
+              width: 250px;
+              gap:90px;
+              
+            }
+.image-wrapper{
+  display:flex;
+  gap:30px;
+  justify-content: center;
 }
+  }
+  
+    
+  }
+
+

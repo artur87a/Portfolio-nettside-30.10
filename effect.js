@@ -56,3 +56,27 @@ const animate = () => {
 
 init();
 animate();
+
+
+/*EFFECT av tilt left */
+const section = document.querySelector('.projects-section');
+const element = section.querySelector('.tilt-in-left-1');
+
+let inViewport = false;
+
+function checkViewport() {
+  const rect = section.getBoundingClientRect();
+  inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+  if (inViewport) {
+    element.classList.add('tilt-in-left-1');
+  } else {
+    element.classList.remove('tilt-in-left-1');
+  }
+}
+
+
+checkViewport();
+
+
+window.addEventListener('scroll', checkViewport);
+/*ends here*/
