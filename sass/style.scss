@@ -3,7 +3,7 @@
 @use "./effect" as *;
 @use "./animationtext" as *;
 @use "./about" as *;
-@use "./skills"  as *;
+@use "./skills" as *;
 @use "./projects" as *;
 @use "./contact" as *;
 
@@ -38,7 +38,7 @@ body {
     font-size: 32px;
     text-decoration: none;
     color: white;
-    animation: logoAnimation 4s infinite;
+    animation: logoAnimation 5s;
     font-weight: 600;
   }
 }
@@ -48,9 +48,8 @@ body {
   display: flex;
   gap: 50px;
   justify-content: flex-end;
-  flex-wrap:nowrap ;
-  
-  
+  flex-wrap: nowrap;
+
   // padding-left: 840px;
 
   a {
@@ -100,7 +99,7 @@ body {
   cursor: pointer;
   scale: 2.8;
   position: fixed;
-right: 40px;
+  right: 40px;
   // top:30px;
   transition: 0.5s ease-in-out;
 }
@@ -110,8 +109,7 @@ right: 40px;
 }
 
 #sidebar.open {
-  top: 100px;
-
+  top: 0;
   opacity: 1;
   transition: 0.5s ease-in-out;
 }
@@ -158,6 +156,8 @@ right: 40px;
     z-index: 1;
     overflow: hidden;
     transition: 0.5s;
+    color: black;
+    font-weight: 400;
   }
   .home-content p {
     font-size: 16px;
@@ -167,9 +167,11 @@ right: 40px;
   .btn-box a:nth-child(2) {
     background: transparent;
     color: #00abf0;
+    transition: 0.5s ease-in-out;
   }
   .btn-box a:nth-child(2):hover {
-    color: $main-color;
+    color: white;
+    transition: 0.5s ease-in-out;
   }
   .btn-box a:nth-child(2)::before {
     background: #00abf0;
@@ -190,24 +192,22 @@ right: 40px;
     width: 100%;
   }
   .btn-box a:hover {
-    color: white;
+    color: #00abf0;
   }
 
-.home-links-wrapper {
-  width: 100%;
-  z-index: -1;
-}
+  .home-links-wrapper {
+    width: 100%;
+    z-index: -1;
+  }
 
   .home-links {
     position: fixed;
     bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%) ;
+    transform: translateX(-50%);
     width: 270px;
     display: flex;
     justify-content: space-between;
-    
-    
   }
   .home-links a {
     position: relative;
@@ -223,6 +223,5 @@ right: 40px;
     text-decoration: none;
     color: $second-color;
     opacity: 100%;
-    
   }
 }
