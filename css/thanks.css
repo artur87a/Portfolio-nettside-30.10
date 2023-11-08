@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #112e42;
+    
+    color: whitesmoke;
+    overflow-x: hidden;
+    font-size: 71%;
+  }
