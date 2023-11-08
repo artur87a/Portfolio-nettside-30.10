@@ -9,7 +9,7 @@ btn.addEventListener("click", function(e){
     var body = "name: " +name + "<br/> email: " + email + "<br/> subject: " +subject + "<br/> message: " + message;
 
 
-                    Email.send({
+                    email.send({
         SecureToken : "a19d3a27-0c88-4492-8eb5-56921e8ea43c",
         From : 'artur.kodehode@gmail.com',
         To : document.getElementById("email").value,
