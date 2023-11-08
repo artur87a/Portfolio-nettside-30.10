@@ -18,7 +18,7 @@
     <script src="script.js" defer></script>
     <script src="effect.js" defer></script>
     <script src="mailer.js" defer></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
   </head>
   <body>
     <div id="container">
@@ -174,8 +174,29 @@
       <div class="contact-content">
         <div class="container">
           <h2>Send me a message</h2>
+          <form action="https://public.herotofu.com/v1/19f2c400-7e39-11ee-97b0-f5224e9a6b83" method="post" accept-charset="UTF-8">
+            <div>
+              <label for="name">Your Name</label>
+              <input name="Name" id="name" type="text" required />
+            </div>
+            <div>
+              <label for="email">Your Email</label>
+              <input name="Email" id="email" type="email" required  />
+            </div>
+            <div>
+              <label for="message">Your Message</label>
+              <textarea name="Message" id="message" required></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Send E-mail" class="submit-button" />
+              <div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+            </div>
+          </form>
+          </div>
 
-          <div class="form">
+          <!-- <div class="form">
             <form method="post">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />  
@@ -189,7 +210,7 @@
               <textarea id="message"  cols="30" rows="10"></textarea>
               <button id="btn">Send</button>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
