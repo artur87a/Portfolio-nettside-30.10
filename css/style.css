@@ -373,6 +373,8 @@ body .logo {
 .home .home-content {
   width: 600px;
   z-index: 10;
+  position: absolute;
+  left: 200px;
 }
 .home .home-content h1 {
   font-size: 60px;
@@ -468,4 +470,19 @@ body .logo {
   text-decoration: none;
   color: #93b7be;
   opacity: 100%;
+}
+.home img {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  right: 300px;
+  border-radius: 50px;
+}
+.home #hoverphoto {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+.home #hoverphoto:hover {
+  opacity: 1;
+  transition: 1s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
