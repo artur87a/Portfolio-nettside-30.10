@@ -1,5 +1,5 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let lines = [];
 let maxLines = 110; // Set your desired maximum number of lines
 const colors = ["#A0DDFF", "#758ECD", "#C1CEFE", "#624CAB", "#45CB85"];
@@ -59,7 +59,7 @@ function updateLine(line) {
 
 function init() {
   resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener("resize", resizeCanvas);
   for (let i = 0; i < 100; i++) {
     lines.push(createLine());
   }
@@ -77,7 +77,37 @@ function animate() {
 init();
 animate();
 
-// /*EFFECT av tilt left */
+
+/*EFFECT AV TILT */
+const section = document.querySelector(".projects-section");
+const element = section.querySelector(".tilt-in-left-1");
+let inViewport = false;
+
+function checkViewport() {
+  const rect = section.getBoundingClientRect();
+  inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+  if (inViewport) {
+    console.log("Element in viewport");
+    element.classList.add("tilt-in-left-1");
+  } else {
+    console.log("Element not in viewport");
+    element.classList.remove("tilt-in-left-1");
+  }
+}
+
+function handleScroll() {
+  if (!inViewport) {
+    window.addEventListener("scroll", checkViewport);
+  } else {
+    window.removeEventListener("scroll", checkViewport);
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+/*ends here TILT*/
+
+// /*EFFECT av tilt left its not working*/
 // const section = document.querySelector('.projects-section');
 // const element = section.querySelector('.tilt-in-left-1');
 
@@ -97,26 +127,3 @@ animate();
 
 // window.addEventListener('scroll', checkViewport);
 // /*ends here*/
-
-const section = document.querySelector('.projects-section');
-const element = section.querySelector('.tilt-in-left-1');
-let inViewport = false;
-
-function checkViewport() {
-  const rect = section.getBoundingClientRect();
-  const isInSectionViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-  if (isInSectionViewport && !inViewport) {
-    // Element enters the viewport
-    element.classList.add('tilt-in-left-1');
-    inViewport = true;
-  } else if (!isInSectionViewport && inViewport) {
-    // Element leaves the viewport
-    element.classList.remove('tilt-in-left-1');
-    inViewport = false;
-  }
-}
-
-checkViewport();
-
-window.addEventListener('scroll', checkViewport);
