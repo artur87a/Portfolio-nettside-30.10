@@ -196,6 +196,12 @@
 .projects-section .tilt-in-left-1 img {
   height: 300px;
   width: 250px;
+  border: 1px black solid;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.projects-section .tilt-in-left-1 img:hover {
+  scale: 1.1;
 }
 .projects-section .tilt-in-left-1 .image-wrapper {
   display: flex;

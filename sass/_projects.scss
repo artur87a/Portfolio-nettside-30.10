@@ -20,14 +20,19 @@
             img{
               height: 300px;
               width: 250px;
-              
-              
-            }
+              border: 1px black solid;
+              border-radius: 12px;
+              cursor: pointer;
+              }
+              img:hover{
+                scale:1.1;
+              }
 .image-wrapper{
   display:flex;
   gap:30px;
   justify-content: center;
   align-items: center;
+  
 }
   }
   
