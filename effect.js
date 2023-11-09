@@ -1,8 +1,9 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let lines = [];
-const maxLines = 100; // Set your desired maximum number of lines
-const colors = ['#FF5733', '#E22D60', '#9E004F', '#600080', '#283593'];
+const maxLines = 110; // Set your desired maximum number of lines
+// const colors = ['#FF5733', '#E22D60', '#9E004F', '#600080', '#283593'];
+const colors = ["#A0DDFF", "#758ECD", "#C1CEFE", "#624CAB", "#45CB85"]
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;

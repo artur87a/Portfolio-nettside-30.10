@@ -233,6 +233,7 @@ body {
     position: absolute;
     right: 300px;
     border-radius: 50px;
+    cursor:pointer;
   }
   #hoverphoto{
     opacity: 0;
@@ -241,6 +242,8 @@ body {
   #hoverphoto:hover{
     opacity: 1;
     transition: 1s ease-in-out;
+    
+    
   }
   
   
