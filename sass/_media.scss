@@ -11,6 +11,7 @@
 }
 
 @media screen and (max-width: 599px){
+   
     .menu{
         visibility: visible;
         position: absolute;
@@ -27,8 +28,8 @@
         align-items: center;
         
     }
-    #home{
-        f
+    .home{
+       
         
     }
     .skills-section{
@@ -79,3 +80,6 @@
     100% { color: #93b7be; transform: scale(1); }
   }
   /*end of logo animation*/
+
+
+  

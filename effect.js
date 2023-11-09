@@ -1,13 +1,19 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let lines = [];
-const maxLines = 110; // Set your desired maximum number of lines
-// const colors = ['#FF5733', '#E22D60', '#9E004F', '#600080', '#283593'];
-const colors = ["#A0DDFF", "#758ECD", "#C1CEFE", "#624CAB", "#45CB85"]
+let maxLines = 110; // Set your desired maximum number of lines
+const colors = ["#A0DDFF", "#758ECD", "#C1CEFE", "#624CAB", "#45CB85"];
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+
+  if (canvas.width < 599) {
+    maxLines = 40;
+  } else {
+    maxLines = 110;
+  }
+
   if (lines.length > maxLines) {
     // Remove excess lines
     lines.splice(maxLines);
@@ -71,8 +77,6 @@ function animate() {
 init();
 animate();
 
-
-
 /*EFFECT av tilt left */
 const section = document.querySelector('.projects-section');
 const element = section.querySelector('.tilt-in-left-1');
@@ -89,11 +93,7 @@ function checkViewport() {
   }
 }
 
-
 checkViewport();
-
 
 window.addEventListener('scroll', checkViewport);
 /*ends here*/
-
-
