@@ -393,11 +393,16 @@ body .logo {
 }
 .home .home-content h1 {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .home .home-content h3 {
-  font-size: 32px;
+  font-size: 34px;
   color: #00abf0;
+  font-weight: 600;
+}
+.home .home-content h4 {
+  font-size: 20px;
+  font-weight: 500;
 }
 .home .home-content .btn-box {
   display: flex;
@@ -519,7 +524,7 @@ body .logo {
   transition: 1s ease-in-out;
 }
 .home .imageHome-wrapper .image2 {
-  opacity: 0;
+  opacity: 10%;
   transition: 1s ease-in-out;
 }
 .home .imageHome-wrapper .image2:hover {
