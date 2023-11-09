@@ -21,6 +21,9 @@
     justify-content: center;
     align-items: center;
   }
+  .home {
+    justify-content: center;
+  }
   .skills-section {
     scale: 0.5;
     justify-content: center;
@@ -32,6 +35,13 @@
   }
   .skills-content {
     justify-content: center;
+  }
+  .image-wrapper img {
+    left: 100px;
+    scale: 0.5;
+  }
+  .home-content h1 {
+    font-size: 4px;
   }
 }
 @media screen and (max-width: 920px) {
@@ -370,7 +380,7 @@ body .logo {
 .home .home-content {
   width: 600px;
   z-index: 10;
-  position: absolute;
+  position: relative;
   left: 200px;
 }
 .home .home-content h1 {
@@ -468,19 +478,34 @@ body .logo {
   color: #93b7be;
   opacity: 100%;
 }
-.home img {
+.home .image-wrapper {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.home .image-wrapper .image1 {
   width: 400px;
   height: 500px;
-  position: absolute;
-  right: 300px;
+  position: relative;
+  right: 0px;
   border-radius: 50px;
   cursor: pointer;
+  top: 0px;
 }
-.home #hoverphoto {
+.home .image-wrapper .image2 {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  right: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+  top: 0px;
+}
+.home .image-wrapper #hoverphoto {
   opacity: 0;
   transition: 1s ease-in-out;
 }
-.home #hoverphoto:hover {
+.home .image-wrapper #hoverphoto:hover {
   opacity: 1;
   transition: 1s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

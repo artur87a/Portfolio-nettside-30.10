@@ -29,7 +29,9 @@
         
     }
     .home{
-       
+      justify-content: center;
+      
+      
         
     }
     .skills-section{
@@ -46,6 +48,22 @@
     .skills-content{
         justify-content: center;
     }
+    .image-wrapper{
+        
+        img{
+            left: 100px;
+            
+            scale: 0.5;
+            
+            
+        }
+        
+    }
+    .home-content{
+        h1{
+        font-size: 4px;}
+    }
+    
     
 }
 @media screen and (max-width: 920px){

@@ -118,11 +118,12 @@ body {
   align-items: center;
   height: 100vh;
   padding: 0 5%;
+  
 
   .home-content {
     width: 600px;
     z-index: 10;
-    position:absolute;
+    position:relative;
     left:200px
   }
   .home-content h1 {
@@ -227,13 +228,28 @@ body {
     color: $second-color;
     opacity: 100%;
   }
-  img{
+  .image-wrapper{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    .image1{
     width: 400px;
     height: 500px;
-    position: absolute;
-    right: 300px;
+    position: relative;
+    right: 0px;
     border-radius: 50px;
     cursor:pointer;
+    top:0px;
+    }
+    .image2{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    right: 0px;
+    border-radius: 50px;
+    cursor:pointer;
+    top:0px;
+
   }
   #hoverphoto{
     opacity: 0;
@@ -247,4 +263,5 @@ body {
   }
   
   
+}
 }
