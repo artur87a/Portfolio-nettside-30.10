@@ -175,6 +175,19 @@
 .skills-section .skills-box p {
   text-align: center;
 }
+.skills-section .skills-box:hover {
+  background: linear-gradient(to top, #3498db, #e74c3c);
+  border-radius: 30px;
+  animation: fillAnimation 2s ease-in-out;
+}
+@keyframes fillAnimation {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 
 .projects-section {
   min-height: 100vh;
