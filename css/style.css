@@ -510,6 +510,11 @@ body .logo {
   color: #93b7be;
   opacity: 100%;
 }
+.home span {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 2rem;
+}
 .home .imageHome-wrapper {
   position: absolute;
   top: 20%;
