@@ -2,33 +2,30 @@
   min-height: 100vh;
   padding: 2rem 7%;
   padding-top: 200px;
-  
-  
+
   // background-color: aqua;
-  
-  
- 
-.about-content{
+
+  .about-content {
     font-size: 20px;
   }
 
-.waviy {
-  position: relative;
-  
-}
-#waviy p {
- display:inline-flex;
-  font-size: 40px;
-  font-weight: 900;
-  
-  color: #fff;
-//   text-transform: uppercase;
-  animation: flip 7s infinite;
-  animation-delay: calc(.2s * var(--i))
-}
-@keyframes flip {
-  0%,80% {
-    transform: rotateY(360deg) 
+  .waviy {
+    position: relative;
   }
-}
+  #waviy p {
+    display: inline-flex;
+    font-size: 40px;
+    font-weight: 900;
+
+    color: #fff;
+    //   text-transform: uppercase;
+    animation: flip 7s infinite;
+    animation-delay: calc(0.2s * var(--i));
+  }
+  @keyframes flip {
+    0%,
+    80% {
+      transform: rotateY(360deg);
+    }
+  }
 }
